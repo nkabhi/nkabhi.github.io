@@ -1,99 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0028)https://abhijit.sen.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijit Sen | Cybersecurity</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <canvas id="matrix"></canvas>
-
-    <header>
-        <h1>ABHIJIT SEN</h1>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#exp">Experience</a>
-            <a href="#contact">Contact</a>
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="description" content="Abhijit Sen — coding videos, courses, and tech products serving millions.">
+    <title>Abhijit.Sen — Visual Studio Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./css/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 24 24&#39;%3E%3Cpath fill=&#39;%230098ff&#39; d=&#39;M17 1.5l-2.5 2.5L5 13.5 1.5 11 0 12.5 5 17l12-12-1.5-1.5L17 1.5z&#39;/%3E%3C/svg%3E">
+  <script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="761c7fe7-dd89-4766-8c6e-cf6ae88e2482" src="chrome-extension://almalgbpmcfpdaopimbdchdliminoign/executors/200.js"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="761c7fe7-dd89-4766-8c6e-cf6ae88e2482" src="chrome-extension://almalgbpmcfpdaopimbdchdliminoign/executors/101.js"></script></head>
+  <body bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImFsbWFsZ2JwbWNmcGRhb3BpbWJkY2hkbGltaW5vaWduIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjEuMiIsInNjb3JlIjoyMDEwMjB9XQ==">
+    <!-- ===== Title Bar (menu) ===== -->
+    <header class="titlebar">
+      <div class="titlebar-left" bis_skin_checked="1">
+        <div class="window-controls" aria-hidden="true" bis_skin_checked="1">
+          <span class="wc wc-close"></span>
+          <span class="wc wc-min"></span>
+          <span class="wc wc-max"></span>
+        </div>
+        <nav class="menu" id="menu" aria-label="Application menu">
+          <button class="menu-item" data-menu="file">File</button>
+          <button class="menu-item" data-menu="edit">Edit</button>
+          <button class="menu-item" data-menu="selection">Selection</button>
+          <button class="menu-item" data-menu="view">View</button>
+          <button class="menu-item" data-menu="go">Go</button>
+          <button class="menu-item" data-menu="run">Run</button>
+          <button class="menu-item" data-menu="terminal">Terminal</button>
+          <button class="menu-item" data-menu="help">Help</button>
         </nav>
+        <div class="menu-dropdown" id="menu-dropdown" role="menu" hidden="" bis_skin_checked="1"></div>
+      </div>
+      <div class="titlebar-center" bis_skin_checked="1">
+        <span class="search-bar">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M10.68 11.74a6 6 0 1 1 1.06-1.06l3.04 3.04a.75.75 0 0 1-1.06 1.06ZM11.5 7a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Z"></path>
+          </svg>
+          Abhijit.Sen
+        </span>
+      </div>
+      <div class="titlebar-right" bis_skin_checked="1">
+        <button class="tb-icon" id="toggle-sidebar" aria-label="Toggle primary sidebar" title="Toggle Primary Side Bar (Ctrl+B)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="16" rx="1.5"></rect>
+            <line x1="9" y1="4" x2="9" y2="20"></line>
+            <rect x="3" y="4" width="6" height="16" fill="currentColor" opacity="0.45" stroke="none"></rect>
+          </svg>
+        </button>
+        <button class="tb-icon is-active" id="toggle-terminal" aria-label="Toggle terminal" title="Toggle Panel (Ctrl+`)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="16" rx="1.5"></rect>
+            <line x1="3" y1="14" x2="21" y2="14"></line>
+            <rect x="3" y="14" width="18" height="6" fill="currentColor" opacity="0.45" stroke="none"></rect>
+          </svg>
+        </button>
+        <button class="tb-icon" aria-label="Toggle secondary sidebar" title="Toggle Secondary Side Bar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="16" rx="1.5"></rect>
+            <line x1="15" y1="4" x2="15" y2="20"></line>
+            <rect x="15" y="4" width="6" height="16" fill="currentColor" opacity="0.45" stroke="none"></rect>
+          </svg>
+        </button>
+      </div>
     </header>
 
-    <section class="hero">
-        <h2>I Secure Enterprise Infrastructure</h2>
-
-        <p>
-            Cybersecurity |
-            SOC |
-            SIEM |
-            VAPT |
-            AI Security |
-            Network Security
-        </p>
-
-        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-            Hire Me
+    <!-- ===== Main workbench ===== -->
+    <div class="workbench" bis_skin_checked="1">
+      <!-- Activity bar -->
+      <aside class="activity-bar" aria-label="Activity bar">
+        <button class="ab-btn active" data-section="explorer" aria-label="Explorer" title="Explorer">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 6h6l2 2h10v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6z"></path>
+          </svg>
         </button>
-    </section>
+        <button class="ab-btn" aria-label="Search" title="Search">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="ab-btn" aria-label="Source control" title="Source control">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="6" cy="6" r="2.5"></circle><circle cx="6" cy="18" r="2.5"></circle><circle cx="18" cy="12" r="2.5"></circle>
+            <path d="M6 8.5v7"></path><path d="M8.5 6h6a3 3 0 0 1 3 3v.5"></path>
+          </svg>
+        </button>
+        <button class="ab-btn" aria-label="Run and debug" title="Run">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="6 4 20 12 6 20 6 4" fill="currentColor"></polygon>
+          </svg>
+        </button>
+        <button class="ab-btn" aria-label="Extensions" title="Extensions">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="8" height="8" rx="1"></rect>
+            <rect x="13" y="13" width="8" height="8" rx="1"></rect>
+            <rect x="13" y="3" width="8" height="8" rx="1"></rect>
+            <rect x="3" y="13" width="8" height="8" rx="1"></rect>
+          </svg>
+        </button>
+        <div class="ab-spacer" bis_skin_checked="1"></div>
+        <button class="ab-btn" aria-label="Accounts" title="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path>
+          </svg>
+        </button>
+        <button class="ab-btn" aria-label="Settings" title="Settings">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1A2 2 0 1 1 4.3 17l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>
+          </svg>
+        </button>
+      </aside>
 
-    <section id="about" class="card">
-        <h2>About</h2>
-
-        <p>
-            Senior Cybersecurity professional with experience in enterprise
-            security, SOC operations, VAPT, threat hunting, automation using
-            Python, and AI-powered cybersecurity solutions.
-        </p>
-    </section>
-
-    <section id="skills" class="card">
-        <h2>Skills</h2>
-
-        <div class="grid">
-            <span>Network Security</span>
-            <span>SIEM</span>
-            <span>Azure Sentinel</span>
-            <span>Defender for Cloud</span>
-            <span>Python</span>
-            <span>Bash</span>
-            <span>PowerShell</span>
-            <span>OWASP</span>
-            <span>Red Team</span>
-            <span>Blue Team</span>
-            <span>MITRE ATT&CK</span>
-            <span>AI Security</span>
+      <!-- Side bar (Explorer) -->
+      <aside class="sidebar" aria-label="Explorer">
+        <div class="sidebar-header" bis_skin_checked="1">
+          <span>Explorer</span>
+          <button class="sb-icon" aria-label="More">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="19" cy="12" r="1.5"></circle></svg>
+          </button>
         </div>
-    </section>
 
-    <section id="exp" class="card">
-        <h2>Experience</h2>
+        <details open="" class="tree-group">
+          <summary class="tree-summary">
+            <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+            <span class="folder-name">HITESH-CHOUDHARY</span>
+          </summary>
 
-        <ul>
-            <li><strong>TCS</strong> – Network Security Administrator (2022–Present)</li>
-            <li><strong>Renovision</strong> – Datacenter Engineer</li>
-            <li><strong>Maclean World</strong> – NOC Engineer</li>
-            <li><strong>KAVISH</strong> – Network Operations Center Engineer</li>
-            <li><strong>GTPL KCBPL</strong> – Network Engineer</li>
-        </ul>
-    </section>
+          <details open="" class="tree-group nested">
+            <summary class="tree-summary">
+              <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+              <span class="folder-icon">📁</span>
+              <span>about</span>
+            </summary>
+            <ul class="tree-files">
+              <li><button class="tree-file active" data-tab="readme"><span class="fi md"></span>README.md</button></li>
+              <li><button class="tree-file" data-tab="profile"><span class="fi json"></span>profile.json</button></li>
+            </ul>
+          </details>
 
-    <section id="contact" class="card">
-        <h2>Contact</h2>
+          <details open="" class="tree-group nested">
+            <summary class="tree-summary">
+              <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+              <span class="folder-icon">📁</span>
+              <span>youtube</span>
+            </summary>
+            <ul class="tree-files">
+              <li><button class="tree-file" data-tab="youtube"><span class="fi yml"></span>channels.yml</button></li>
+            </ul>
+          </details>
 
-        <p>Email: your@email.com</p>
-        <p>GitHub: github.com/nkabhi</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    </section>
+          <details open="" class="tree-group nested">
+            <summary class="tree-summary">
+              <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+              <span class="folder-icon">📁</span>
+              <span>platforms</span>
+            </summary>
+            <ul class="tree-files">
+              <li><button class="tree-file" data-tab="platforms"><span class="fi tsx"></span>platforms.tsx</button></li>
+            </ul>
+          </details>
 
-    <footer>
-        &copy; 2026 Abhijit Sen
+          <details open="" class="tree-group nested">
+            <summary class="tree-summary">
+              <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+              <span class="folder-icon">📁</span>
+              <span>udemy</span>
+            </summary>
+            <ul class="tree-files">
+              <li><button class="tree-file" data-tab="courses"><span class="fi md"></span>courses.md</button></li>
+            </ul>
+          </details>
+
+          <details open="" class="tree-group nested">
+            <summary class="tree-summary">
+              <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+              <span class="folder-icon">📁</span>
+              <span>products</span>
+            </summary>
+            <ul class="tree-files">
+              <li><button class="tree-file" data-tab="products"><span class="fi json"></span>products.json</button></li>
+            </ul>
+          </details>
+
+          <details open="" class="tree-group nested">
+            <summary class="tree-summary">
+              <svg class="chev" width="10" height="10" viewBox="0 0 10 10"><path d="M2 3l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+              <span class="folder-icon">📁</span>
+              <span>connect</span>
+            </summary>
+            <ul class="tree-files">
+              <li><button class="tree-file" data-tab="connect"><span class="fi ts"></span>socials.ts</button></li>
+            </ul>
+          </details>
+
+          <ul class="tree-files root-files">
+            <li><button class="tree-file" data-tab="license"><span class="fi md"></span>LICENSE.txt</button></li>
+            <li><button class="tree-file" data-tab="gitignore"><span class="fi git"></span>.gitignore</button></li>
+          </ul>
+        </details>
+
+        <div class="outline-panel" bis_skin_checked="1">
+          <div class="outline-header" bis_skin_checked="1">Outline</div>
+          <div class="outline-empty" bis_skin_checked="1">No symbols found</div>
+        </div>
+
+        <div class="sidebar-avatar" bis_skin_checked="1">
+          <img src="./css/11613311" alt="Abhijit Sen" loading="lazy">
+        </div>
+      </aside>
+
+      <!-- Editor area -->
+      <main class="editor with-panel" aria-label="Editor">
+        <div class="tabs" id="tabs" role="tablist" bis_skin_checked="1"><button class="tab active" role="tab" data-tab="readme"><span class="fi md"></span><span>README.md</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="profile"><span class="fi json"></span><span>profile.json</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="youtube"><span class="fi yml"></span><span>channels.yml</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="platforms"><span class="fi tsx"></span><span>platforms.tsx</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="courses"><span class="fi md"></span><span>courses.md</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="products"><span class="fi json"></span><span>products.json</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="connect"><span class="fi ts"></span><span>socials.ts</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="license"><span class="fi md"></span><span>LICENSE.txt</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button><button class="tab" role="tab" data-tab="gitignore"><span class="fi md"></span><span>.gitignore</span><span class="tab-close"><svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></span></button></div>
+        <div class="breadcrumbs" id="breadcrumbs" bis_skin_checked="1">
+          <span>HITESH-CHOUDHARY</span>
+          <span class="bc-sep">›</span>
+          <span id="bc-folder">about</span>
+          <span class="bc-sep">›</span>
+          <span id="bc-file">README.md</span>
+        </div>
+
+        <div class="editor-body" bis_skin_checked="1">
+          <div class="gutter" id="gutter" aria-hidden="true" bis_skin_checked="1"><div bis_skin_checked="1">1</div><div bis_skin_checked="1">2</div><div bis_skin_checked="1">3</div><div bis_skin_checked="1">4</div><div bis_skin_checked="1">5</div><div bis_skin_checked="1">6</div><div bis_skin_checked="1">7</div><div bis_skin_checked="1">8</div><div bis_skin_checked="1">9</div><div bis_skin_checked="1">10</div><div bis_skin_checked="1">11</div><div bis_skin_checked="1">12</div><div bis_skin_checked="1">13</div><div bis_skin_checked="1">14</div><div bis_skin_checked="1">15</div><div bis_skin_checked="1">16</div><div bis_skin_checked="1">17</div><div bis_skin_checked="1">18</div><div bis_skin_checked="1">19</div><div bis_skin_checked="1">20</div><div bis_skin_checked="1">21</div><div bis_skin_checked="1">22</div><div bis_skin_checked="1">23</div><div bis_skin_checked="1">24</div><div bis_skin_checked="1">25</div><div bis_skin_checked="1">26</div><div bis_skin_checked="1">27</div><div bis_skin_checked="1">28</div><div bis_skin_checked="1">29</div><div bis_skin_checked="1">30</div><div bis_skin_checked="1">31</div><div bis_skin_checked="1">32</div><div bis_skin_checked="1">33</div><div bis_skin_checked="1">34</div><div bis_skin_checked="1">35</div><div bis_skin_checked="1">36</div><div bis_skin_checked="1">37</div><div bis_skin_checked="1">38</div><div bis_skin_checked="1">39</div><div bis_skin_checked="1">40</div><div bis_skin_checked="1">41</div><div bis_skin_checked="1">42</div><div bis_skin_checked="1">43</div><div bis_skin_checked="1">44</div><div bis_skin_checked="1">45</div><div bis_skin_checked="1">46</div><div bis_skin_checked="1">47</div><div bis_skin_checked="1">48</div><div bis_skin_checked="1">49</div></div>
+          <div class="content" id="content" bis_skin_checked="1"><div class="code-line" bis_skin_checked="1"><span class="tk-cm">/**</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;* ─────────────────────────────────────────────</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;*  @name      Abhijit Sen</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;*  @role      Coding educator · YouTuber · Builder</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;*</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;*  @sponsor   For sponsorships, write to:</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;*             <a class="tk-link" href="mailto:team@abhijit.sen.com">team@abhijit.sen.com</a></span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;* ─────────────────────────────────────────────</span></div><div class="code-line" bis_skin_checked="1"><span class="tk-cm">&nbsp;*/</span></div><div class="code-line" bis_skin_checked="1"><div class="hero" bis_skin_checked="1">
+      <h1 class="hero-name"># Abhijit Sen<span class="hero-caret"></span></h1>
+      <p class="hero-tagline">I make coding videos and run a few tech products that serve millions of users.</p>
+      <p class="hero-tagline muted">Coding educator, ex-Founder LCO (acquired), ex-Sr. Director (Physics Wallah, public listed company), ex-CTO @ iNeuron.ai. Two YouTube channels, 2.5K+ videos, a few hobby products, and a chai lover who drinks coffee with his wife. I talk about cutting-edge tech and AI almost every day. I also work with top tech companies to promote their products, attend their events, and consult with them to make their products better.</p>
+    </div></div><div class="code-line" bis_skin_checked="1">
+    <div class="badge-row" bis_skin_checked="1">
+      <span class="badge"><span class="dot"></span>Chai aur Code · 778K (Hindi)</span>
+      <span class="badge"><span class="dot"></span>Abhijit Sen · 1.02M (English)</span>
+    </div>
+    <div class="badge-row" bis_skin_checked="1">
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>Instagram · 180K</span>
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>X (Twitter) · 75K</span>
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>LinkedIn · 480K</span>
+    </div>
+    <div class="badge-row" bis_skin_checked="1">
+      <span class="badge"><span class="dot" style="background:#dcdcaa"></span>2.5K+ videos</span>
+      <span class="badge"><span class="dot" style="background:#ce9178"></span>7 Udemy courses</span>
+      <span class="badge"><span class="dot" style="background:#c586c0"></span>2 platforms</span>
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>4 hobby products</span>
+    </div></div><div class="code-line" bis_skin_checked="1"><span class="md-h2">## What I do</span></div><div class="code-line" bis_skin_checked="1"><span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">Chai aur Code</a> (Hindi) and <a class="tk-link" href="https://www.youtube.com/@AbhijitSen" target="_blank">Abhijit Sen</a> (English) — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span></div><div class="code-line" bis_skin_checked="1"><span class="md-p">I build learning platforms — <a class="tk-link" href="https://chaicode.com/" target="_blank">ChaiCode</a> for cohorts and <a class="tk-link" href="https://masterji.co/" target="_blank">Masterji.co</a> for community, problem-solving, and hackathons — and a handful of hobby products on the side.</span></div><div class="code-line" bis_skin_checked="1"><span class="md-h2">## Sponsorships</span></div><div class="code-line" bis_skin_checked="1"><span class="md-p">Want to sponsor a video, a channel, or a course? Reach out at <a class="tk-link" href="mailto:team@abhijit.sen.com"><strong>team@abhijit.sen.com</strong></a>. Audience: ~1.8M YouTube subscribers across two channels, plus an engaged community on Instagram (180K), LinkedIn (480K), and X (75K).</span></div><div class="code-line" bis_skin_checked="1"><span class="md-h2">## Quick links</span></div><div class="code-line" bis_skin_checked="1"><span class="md-quote">Open the file tree on the left, or use <kbd style="background:#3c3c3c;border:1px solid #555;padding:1px 6px;border-radius:3px;font-size:11px">Ctrl/Cmd + P</kbd> to cycle through sections.</span></div><div class="code-line" bis_skin_checked="1"><div class="card-grid" bis_skin_checked="1"><button class="card" style="text-align:left;cursor:pointer">
+        <div class="card-head" bis_skin_checked="1">
+          <div class="card-title" bis_skin_checked="1">Latest from YouTube</div>
+        </div>
+        <div class="card-desc" bis_skin_checked="1">Two channels, 2.5K+ videos.</div>
+        <div class="card-foot" bis_skin_checked="1"><span class="chip">yt</span></div>
+      </button><button class="card" style="text-align:left;cursor:pointer">
+        <div class="card-head" bis_skin_checked="1">
+          <div class="card-title" bis_skin_checked="1">Cohorts at ChaiCode</div>
+        </div>
+        <div class="card-desc" bis_skin_checked="1">Live programs and structured tracks.</div>
+        <div class="card-foot" bis_skin_checked="1"><span class="chip">cohorts</span></div>
+      </button><button class="card" style="text-align:left;cursor:pointer">
+        <div class="card-head" bis_skin_checked="1">
+          <div class="card-title" bis_skin_checked="1">Udemy library</div>
+        </div>
+        <div class="card-desc" bis_skin_checked="1">7 self-paced courses.</div>
+        <div class="card-foot" bis_skin_checked="1"><span class="chip">udemy</span></div>
+      </button><button class="card" style="text-align:left;cursor:pointer">
+        <div class="card-head" bis_skin_checked="1">
+          <div class="card-title" bis_skin_checked="1">Hobby products</div>
+        </div>
+        <div class="card-desc" bis_skin_checked="1">Tools I built for myself &amp; open source.</div>
+        <div class="card-foot" bis_skin_checked="1"><span class="chip">products</span></div>
+      </button></div></div></div>
+          <div class="minimap" aria-hidden="true" bis_skin_checked="1"></div>
+        </div>
+
+        <!-- Bottom terminal panel -->
+        <aside class="panel" id="panel">
+          <div class="panel-resizer" id="panel-resizer" aria-label="Resize panel" title="Drag to resize" bis_skin_checked="1"></div>
+          <header class="panel-head">
+            <div class="panel-tabs" id="panel-tabs" bis_skin_checked="1">
+              <button class="panel-tab" data-panel="problems">PROBLEMS</button>
+              <button class="panel-tab" data-panel="output">OUTPUT</button>
+              <button class="panel-tab" data-panel="debug">DEBUG CONSOLE</button>
+              <button class="panel-tab active" data-panel="terminal">TERMINAL <span class="panel-tab-count">1</span></button>
+              <button class="panel-tab" data-panel="ports">PORTS</button>
+            </div>
+            <div class="panel-actions" bis_skin_checked="1">
+              <div class="panel-filter" id="panel-filter" bis_skin_checked="1">
+                <input type="text" placeholder="Filter (e.g. text, **/*.ts, !**/node_modules/**)" aria-label="Filter problems">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="3 4 21 4 14 12.5 14 21 10 18 10 12.5"></polygon></svg>
+              </div>
+              <button class="panel-icon" aria-label="Show as tree" title="Show as Tree">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="7" height="7" rx="1"></rect><rect x="14" y="4" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+              </button>
+              <button class="panel-icon" aria-label="Collapse all" title="Collapse All">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <span class="panel-sep"></span>
+              <button class="panel-icon" aria-label="Maximize panel" title="Maximize Panel Size">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="4 9 4 4 9 4"></polyline><polyline points="20 9 20 4 15 4"></polyline><polyline points="4 15 4 20 9 20"></polyline><polyline points="20 15 20 20 15 20"></polyline></svg>
+              </button>
+              <button class="panel-icon" id="panel-close" aria-label="Close panel" title="Close Panel">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="6" y1="18" x2="18" y2="6"></line></svg>
+              </button>
+            </div>
+          </header>
+          <div class="panel-body" bis_skin_checked="1">
+            <div class="terminal-view panel-pane is-active" data-panel="terminal" id="terminal-view" bis_skin_checked="1"><div class="t-row t-muted" bis_skin_checked="1">Last login: Sat, 27 Jun 2026 18:47:25 GMT on ttys001</div><div class="t-row" bis_skin_checked="1"><span class="t-arrow">➜</span><span class="t-cwd">~/Abhijit.Sen</span><span class="t-branch">(main)</span> <span class="t-cmd">whoami</span></div><div class="t-row t-row t-out" bis_skin_checked="1">abhijit sen</div><div class="t-row" bis_skin_checked="1"><span class="t-arrow">➜</span><span class="t-cwd">~/Abhijit.Sen</span><span class="t-branch">(main)</span> <span class="t-cmd">cat about.txt</span></div><div class="t-row t-row t-out" bis_skin_checked="1">Coding educator, YouTuber, builder. Two channels, 2.5K+ videos, 7 Udemy courses,</div><div class="t-row t-row t-out" bis_skin_checked="1">and a few products. I talk about cutting-edge tech and AI almost every day.</div><div class="t-row" bis_skin_checked="1"><span class="t-arrow">➜</span><span class="t-cwd">~/Abhijit.Sen</span><span class="t-branch">(main)</span> <span class="t-cmd">ls -la ~/links</span></div><div class="t-row t-row t-out" bis_skin_checked="1">drwx──── youtube     <a class="t-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">@chaiaurcode</a>  <a class="t-link" href="https://www.youtube.com/@AbhijitSen" target="_blank">@AbhijitSen</a></div><div class="t-row t-row t-out" bis_skin_checked="1">drwx──── platforms   <a class="t-link" href="https://chaicode.com/" target="_blank">chaicode.com</a>  <a class="t-link" href="https://masterji.co/" target="_blank">masterji.co</a></div><div class="t-row t-row t-out" bis_skin_checked="1">drwx──── products    <a class="t-link" href="https://inapp.app/" target="_blank">inapp.app</a>  <a class="t-link" href="https://webrequestkit.com/" target="_blank">webrequestkit.com</a>  <a class="t-link" href="https://freeapi.app/" target="_blank">freeapi.app</a></div><div class="t-row t-row t-out" bis_skin_checked="1">drwx──── socials     <a class="t-link" href="https://twitter.com/abhijitsen" target="_blank">@abhijitsen</a>  <a class="t-link" href="https://linkedin.com/in/abhijit.sen" target="_blank">linkedin/abhijit.sen</a></div><div class="t-row" bis_skin_checked="1"><span class="t-arrow">➜</span><span class="t-cwd">~/Abhijit.Sen</span><span class="t-branch">(main)</span> <span class="t-cmd">echo $SPONSORSHIPS</span></div><div class="t-row t-row t-link" bis_skin_checked="1"><a class="t-link" href="mailto:team@abhijit.sen.com">team@abhijit.sen.com</a></div><div class="t-row" bis_skin_checked="1"><span class="t-arrow">➜</span><span class="t-cwd">~/Abhijit.Sen</span><span class="t-branch">(main)</span> <span class="t-caret"></span></div></div>
+            <div class="panel-pane panel-pane-empty" data-panel="problems" bis_skin_checked="1">No problems have been detected in the workspace.</div>
+            <div class="panel-pane panel-pane-empty" data-panel="output" bis_skin_checked="1">No output to display.</div>
+            <div class="panel-pane panel-pane-empty" data-panel="debug" bis_skin_checked="1">Debug console — start a debug session.</div>
+            <div class="panel-pane panel-pane-ports" data-panel="ports" bis_skin_checked="1">
+              <p class="panel-empty-text">No forwarded ports. Forward a port to access your locally running services over the internet.</p>
+              <button class="panel-cta-btn">Forward a Port</button>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <!-- ===== Status bar ===== -->
+    <footer class="statusbar" aria-label="Status bar">
+      <div class="sb-left" bis_skin_checked="1">
+        <span class="sb-item sb-branch">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="6" r="2.5"></circle><circle cx="6" cy="18" r="2.5"></circle><circle cx="18" cy="12" r="2.5"></circle><path d="M6 8.5v7"></path><path d="M8.5 6h6a3 3 0 0 1 3 3v.5"></path></svg>
+          main
+        </span>
+        <span class="sb-item sb-sync">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3-6.7"></path><polyline points="21 3 21 9 15 9"></polyline></svg>
+          0 ↓ 0 ↑
+        </span>
+        <span class="sb-item sb-warn">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg>
+          <span id="sb-subs">1.8M subscribers</span>
+        </span>
+        <span class="sb-item">
+          <span id="sb-videos">2.5K+ videos</span>
+        </span>
+      </div>
+      <div class="sb-right" bis_skin_checked="1">
+        <span class="sb-item">Ln 1, Col 1</span>
+        <span class="sb-item">Spaces: 2</span>
+        <span class="sb-item">UTF-8</span>
+        <span class="sb-item">LF</span>
+        <span class="sb-item" id="sb-lang">Markdown</span>
+        <span class="sb-item sb-feedback">team@abhijit.sen.com</span>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./css/courses.js.download"></script>
+    <script src="./css/main.js.download"></script>
+  
 
-</body>
-</html>
+<veepn-lock-screen><template shadowrootmode="open"><style>html{box-sizing:border-box;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;word-break:normal;tab-size:4}*,:before,:after{box-sizing:border-box;background-repeat:no-repeat}:before,:after{-webkit-text-decoration:inherit;text-decoration:inherit;vertical-align:inherit}*{margin:0;padding:0}hr{height:0;color:inherit;border:0;border-top:1px solid;overflow:visible}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}a{background-color:#0000}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button{height:auto}[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{appearance:none}textarea{resize:vertical;overflow:auto}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner{border-style:none;padding:0}[type=button]::-moz-focus-inner{border-style:none;padding:0}[type=reset]::-moz-focus-inner{border-style:none;padding:0}[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{appearance:auto}button,input,select,textarea{background-color:#0000;border-style:none}button:-moz-focusring{outline:1px dotted buttontext}[type=button]::-moz-focus-inner{outline:1px dotted buttontext}[type=reset]::-moz-focus-inner{outline:1px dotted buttontext}[type=submit]::-moz-focus-inner{outline:1px dotted buttontext}select{appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{color:inherit;white-space:normal;border:0;max-width:100%;display:table}::-webkit-file-upload-button{appearance:auto;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}@keyframes slide-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0%)}}.gradient-blue{background:radial-gradient(106.41% 128.47% at 50.15% 128.47%,#23abff 0%,#3066ff 100%)}.gradient-green{background:radial-gradient(92.26% 118.88% at 50.15% .13%,#00c3c3 0%,#00aab3 100%)}.gradient-purple{background:radial-gradient(165.12% 115.56% at 50.15% .13%,#a15aff 0%,#00a0eb 100%)}.bg-blue{background-color:#f2f5ff}.bg-purple{background-color:#f7f0ff}.bg-green{background-color:#ebffed}.lock-screen{letter-spacing:normal;z-index:2147483638;border-radius:24px;width:327px;font-family:FigtreeVF,sans-serif;animation:.3s ease-in-out forwards slide-in;position:fixed;bottom:24px;right:24px;overflow:hidden;box-shadow:0 24px 32px #00000014}.lock-screen__content{padding:24px 24px 64px;position:relative}.lock-screen__close{opacity:.5;justify-content:center;align-items:center;width:24px;height:24px;display:flex;position:absolute;top:16px;right:16px}.lock-screen__label{color:#fff;background-color:#fff3;border-radius:50px;justify-content:center;align-items:center;gap:8px;width:fit-content;height:26px;margin:-8px auto 16px;padding-inline:16px;font-size:12px;line-height:18px;display:flex}.lock-screen__title{color:#fff;text-align:center;margin-bottom:8px;font-size:20px;font-weight:600;line-height:28px}.lock-screen__description{color:#f5f6f7;text-align:center;font-size:14px;line-height:20px}.lock-screen__description b{font-weight:600}.lock-screen__card{z-index:1;background-color:#fff;border-radius:24px;margin-top:-44px;padding:32px 20px 20px;position:relative}.lock-screen__inner{margin-bottom:24px}.lock-screen__submit{color:#fff;background-color:#f70;border-radius:12px;justify-content:center;align-items:center;gap:10px;width:100%;height:40px;margin-bottom:16px;padding-inline:16px;font-size:16px;font-weight:700;display:flex}.lock-screen__skip{color:#82829c;justify-content:center;align-items:center;margin-inline:auto;font-size:14px;line-height:20px;display:flex}.price-card{background:linear-gradient(254.14deg,#fafbff .04%,#f5f8ff 100.04%);border:1px solid #f2f2fc;border-radius:24px;padding:24px 28px}.price-card__label{color:#4a5764;text-align:center;text-transform:uppercase;margin-bottom:16px;font-size:14px;line-height:20px}.price-card__price{justify-content:center;align-items:flex-start;column-gap:2px;margin-bottom:12px;display:flex}.price-card__currency{color:#515478;font-size:18px;line-height:28px}.price-card__number{color:#14142a;text-align:center;font-size:64px;line-height:54px}.price-card__wrap{flex-direction:column;display:flex}.price-card__decimal{color:#515478;font-size:18px;font-weight:600;line-height:28px}.price-card__period{color:#515478;margin-top:-6px;font-size:14px;line-height:20px}.price-card__discount{justify-content:center;align-items:center;margin-bottom:12px;display:flex;position:relative}.price-card__discount-divider{z-index:0;background-color:#dbe2f9;width:100%;height:1px;position:absolute;top:50%;left:0;transform:translateY(-50%)}.price-card__discount-icon{z-index:1;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.price-card__discount-text{z-index:2;color:#fff;font-size:12px;font-weight:600;line-height:18px;position:relative}.price-card__features{justify-content:center;align-items:center;column-gap:16px;display:flex}.price-card__feature{color:#222e3a;align-items:center;gap:6px;font-size:14px;line-height:20px;display:flex}.price-card__feature:before{content:"";background-color:#20df9e;border-radius:50%;flex-shrink:0;width:4px;height:4px;display:block}.features-list{grid-template-columns:repeat(3,1fr);gap:12px;display:grid}.features-list__item{flex-direction:column;align-items:center;gap:6px;display:flex}.features-list__icon{border-radius:12px;justify-content:center;align-items:center;width:52px;height:52px;display:flex}.features-list__text{color:#293a53;text-align:center;letter-spacing:-.1px;font-size:16px;line-height:24px}</style></template><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-lock-screen><veepn-intro-offer><template shadowrootmode="open"><style>html{box-sizing:border-box;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;word-break:normal;tab-size:4}*,:before,:after{box-sizing:border-box;background-repeat:no-repeat}:before,:after{-webkit-text-decoration:inherit;text-decoration:inherit;vertical-align:inherit}*{margin:0;padding:0}hr{height:0;color:inherit;border:0;border-top:1px solid;overflow:visible}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}a{background-color:#0000}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button{height:auto}[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{appearance:none}textarea{resize:vertical;overflow:auto}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner{border-style:none;padding:0}[type=button]::-moz-focus-inner{border-style:none;padding:0}[type=reset]::-moz-focus-inner{border-style:none;padding:0}[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{appearance:button}button,input,select,textarea{background-color:#0000;border-style:none}button:-moz-focusring{outline:1px dotted buttontext}[type=button]::-moz-focus-inner{outline:1px dotted buttontext}[type=reset]::-moz-focus-inner{outline:1px dotted buttontext}[type=submit]::-moz-focus-inner{outline:1px dotted buttontext}select{appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{color:inherit;white-space:normal;border:0;max-width:100%;display:table}::-webkit-file-upload-button{appearance:button;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}@keyframes slide-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0%)}}.offer-popup{z-index:2147483638;background-color:#fff;border-radius:12px;width:327px;font-family:FigtreeVF,sans-serif;animation:.3s ease-in-out forwards slide-in;position:fixed;bottom:16px;right:16px;overflow:hidden;box-shadow:0 0 16px #293a5333}.offer-popup__close{z-index:1;cursor:pointer;opacity:.5;width:24px;height:24px;position:absolute;top:8px;right:8px}.offer-popup__header{background:radial-gradient(50.52% 128.47% at 50.15% 128.47%,#23abff 0%,#3066ff 100%);padding:24px 24px 12px}.offer-popup__title{text-align:center;color:#fff;margin:0;font-size:20px;font-weight:700;line-height:28px}.offer-popup__main{padding:24px 20px 32px}.offer-popup__subtitle{color:#293a53;text-align:center;margin:0 0 24px;font-size:22px;line-height:32px}.offer-popup__subtitle span{color:#f70}.offer-popup__list{grid-template-columns:repeat(3,1fr);gap:16px;display:grid}.offer-popup__item{text-align:center;color:#293a53;flex-direction:column;align-items:center;row-gap:6px;font-size:16px;line-height:24px;display:flex}.offer-popup__icon{background-color:#ebefff;border-radius:12px;justify-content:center;align-items:center;width:52px;height:52px;margin:0;display:flex}.offer-popup__footer{flex-direction:column;row-gap:16px;padding:0 20px 20px;display:flex}.offer-popup__submit{color:#fff;cursor:pointer;background-color:#f70;border-radius:12px;justify-content:center;align-items:center;height:40px;padding-inline:16px;font-size:16px;font-weight:700;display:flex}.offer-popup__cancel{color:#82829c;cursor:pointer;justify-content:center;align-items:center;font-size:14px;font-weight:400;display:flex}</style></template><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2)format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-intro-offer></body></html>
+
+
