@@ -16,6 +16,7 @@ body {
   margin: 0;
   background: #1e1e1e;
   color: #cccccc;
+  min-height: 100vh;
 }
 
 * {
@@ -25,12 +26,27 @@ body {
 .matrix-bg {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(0, 255, 170, 0.08), transparent 22%),
-    radial-gradient(circle at 80% 15%, rgba(0, 255, 170, 0.06), transparent 24%),
-    radial-gradient(circle at 50% 90%, rgba(0, 255, 170, 0.04), transparent 18%),
+  background-color: #111;
+  background-image:
+    linear-gradient(rgba(0, 255, 170, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 170, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 170, 0.12), transparent 24%),
+    radial-gradient(circle at 80% 15%, rgba(0, 255, 170, 0.08), transparent 20%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 35%, rgba(255, 255, 255, 0.03));
+  background-size: 30px 30px, 30px 30px, auto, auto, auto;
+  animation: matrix-move 18s linear infinite;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.55;
+}
+
+@keyframes matrix-move {
+  from {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: -400px 400px, 400px -400px, 0 0, 0 0, 0 0;
+  }
 }
 
 main {

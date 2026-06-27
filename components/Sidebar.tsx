@@ -27,7 +27,7 @@ const explorerData = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-[280px] shrink-0 border-r border-white/10 bg-vsc-sidebar text-vsc-text overflow-y-auto">
+    <aside className="w-[280px] shrink-0 border-r border-white/10 bg-vsc-sidebar text-vsc-text overflow-y-auto scrollbar-thin">
       <div className="border-b border-white/10 px-4 py-3 text-xs uppercase tracking-[0.18em] text-vsc-text/70">
         explorer
       </div>

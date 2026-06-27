@@ -32,11 +32,17 @@ export default function TerminalPanel() {
           </button>
         ))}
       </div>
-      <div className="flex-1 overflow-y-auto px-4 py-4 text-sm text-vsc-text/80">
+      <div className="flex-1 overflow-y-auto px-4 py-4 text-sm text-vsc-text/80 scrollbar-thin">
         <pre className="whitespace-pre-wrap font-mono text-sm leading-6">
           {terminalLines.map((line) => (
             <div key={line} className="pb-1">
-              {line}
+              {line.startsWith('➜') ? (
+                <span className="text-[#4ec9b0]">{line}</span>
+              ) : line.startsWith('$') ? (
+                <span className="text-[#dcdcaa]">{line}</span>
+              ) : (
+                <span>{line}</span>
+              )}
             </div>
           ))}
         </pre>
