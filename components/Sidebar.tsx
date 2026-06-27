@@ -42,6 +42,24 @@ export default function Sidebar() {
 
   return (
     <aside className="w-[280px] shrink-0 border-r border-white/10 bg-vsc-sidebar text-vsc-text overflow-y-auto scrollbar-thin">
+      <div className="border-b border-white/10 px-4 py-4">
+        <div className="flex items-center gap-3">
+          <div className="h-14 w-14 rounded-full border border-white/10 bg-gradient-to-br from-sky-500 to-cyan-400" />
+          <div>
+            <p className="text-sm font-semibold text-white">Your Name</p>
+            <p className="text-xs text-vsc-text/70">Full stack developer</p>
+          </div>
+        </div>
+        <div className="mt-4 space-y-2 rounded-lg border border-white/10 bg-white/5 p-3">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-vsc-text/60">My files</p>
+          <div className="space-y-1 text-sm">
+            <div className="rounded px-2 py-1 text-vsc-text/80 hover:bg-white/10">README.md</div>
+            <div className="rounded px-2 py-1 text-vsc-text/80 hover:bg-white/10">profile.json</div>
+            <div className="rounded px-2 py-1 text-vsc-text/80 hover:bg-white/10">socials.ts</div>
+          </div>
+        </div>
+      </div>
+
       <div className="border-b border-white/10 px-4 py-3 text-xs uppercase tracking-[0.18em] text-vsc-text/70">
         explorer
       </div>
