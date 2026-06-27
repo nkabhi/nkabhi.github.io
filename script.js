@@ -52,7 +52,7 @@ function drawMatrix() {
 
     // Green text
     ctx.fillStyle = "#00FF00";
-    ctx.font = `${fontSize}px monospace`;
+    ctx.font = fontSize + "px monospace";
 
     // Draw characters
     for (let i = 0; i < drops.length; i++) {
