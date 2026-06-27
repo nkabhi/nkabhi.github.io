@@ -1,0 +1,51 @@
+const udemyCourses = [
+  {
+    name: "Complete web development course",
+    imagUrl: "https://img-c.udemycdn.com/course/750x422/6035102_7d1a.jpg",
+    link: "https://hitesh.ai/udemy",
+    tag: "fullstack",
+    duration: "80+ hours",
+  },
+  {
+    name: "Docker and Kubernetes for beginners | DevOps journey",
+    imagUrl: "https://img-c.udemycdn.com/course/750x422/6515151_7741.jpg",
+    link: "https://hitesh.ai/udemy-devops",
+    tag: "devops",
+    duration: "19+ hours",
+  },
+  {
+    name: "The Ultimate Python Bootcamp: Learn by Building 50 Projects",
+    imagUrl: "https://img-c.udemycdn.com/course/750x422/6629195_fdfd_3.jpg",
+    link: "https://hitesh.ai/udemy-py",
+    tag: "python",
+    duration: "20+ hours",
+  },
+  {
+    name: "Node.js- Beginner to Advance course with projects",
+    imagUrl: "https://img-c.udemycdn.com/course/750x422/6514953_e5eb_2.jpg",
+    link: "https://hitesh.ai/udemy-nodejs",
+    tag: "backend",
+    duration: "36+ hours",
+  },
+  {
+    name: "Full stack generative and Agentic AI with python",
+    imagUrl: "https://img-c.udemycdn.com/course/750x422/6197521_c636.jpg",
+    link: "https://hitesh.ai/udemy-ai",
+    tag: "ai",
+    duration: "32+ hours",
+  },
+  {
+    name: "Complete React and NextJS course with AI powered Projects",
+    imagUrl: "https://img-c.udemycdn.com/course/480x270/6324929_df40.jpg",
+    link: "https://hitesh.ai/udemy-nextjs",
+    tag: "react",
+    duration: "TBA",
+  },
+  {
+    name: "Data structures and Algorithm (DSA) for Tech Interviews",
+    imagUrl: "https://img-c.udemycdn.com/course/480x270/6864077_85e4.jpg",
+    link: "https://hitesh.ai/udemy-dsa-py",
+    tag: "dsa",
+    duration: "TBA",
+  },
+];
