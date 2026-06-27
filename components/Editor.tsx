@@ -14,14 +14,14 @@ const markdownLines = [
 
 export default function Editor() {
   return (
-    <section className="flex min-h-0 flex-1 flex-col overflow-hidden border-b border-white/10 bg-[#1d1d1d]">
-      <div className="border-b border-white/10 bg-vsc-background/95 px-4 py-3">
-        <div className="flex items-center gap-2 overflow-x-auto text-sm text-vsc-text/80 scrollbar-thin">
+    <section className="flex min-h-0 flex-1 flex-col overflow-hidden border-b border-white/10 bg-[#1e1e1e]">
+      <div className="border-b border-white/10 bg-[#252526] px-4 py-3">
+        <div className="flex items-center gap-2 overflow-x-auto text-sm scrollbar-thin">
           {['README.md', 'profile.json'].map((tab) => (
             <div
               key={tab}
-              className={`flex items-center gap-2 rounded-tl rounded-tr border border-white/10 px-3 py-1.5 ${
-                tab === 'README.md' ? 'bg-[#252526] text-white' : 'bg-[#1f1f1f] text-vsc-text/70'
+              className={`flex items-center gap-2 rounded-t-md border border-white/10 px-3 py-1.5 ${
+                tab === 'README.md' ? 'bg-[#1e1e1e] text-white' : 'bg-[#252526] text-vsc-text/70'
               }`}
             >
               <span>{tab}</span>
@@ -31,9 +31,9 @@ export default function Editor() {
         </div>
         <div className="mt-3 flex items-center gap-2 text-xs text-vsc-text/70">
           <span className="text-vsc-text/90">YOUR-PROJECT-NAME</span>
-          <span className="text-vsc-text/40">›</span>
+          <span className="text-vsc-text/50">›</span>
           <span className="text-vsc-text/90">about</span>
-          <span className="text-vsc-text/40">›</span>
+          <span className="text-vsc-text/50">›</span>
           <span className="text-white">README.md</span>
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function Editor() {
             {markdownLines.map((line, index) => {
               if (line.type === 'header') {
                 return (
-                  <div key={index} className="flex items-end gap-3 text-4xl font-semibold text-white">
+                  <div key={index} className="flex items-end gap-2 text-4xl font-semibold text-white">
                     <span className="text-[#569cd6]">#</span>
                     <span>{line.content}</span>
                   </div>
@@ -60,7 +60,7 @@ export default function Editor() {
                     {line.content.map((badge) => (
                       <span
                         key={badge}
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-vsc-text/90"
+                        className="rounded-full border border-white/10 bg-[#2d2d2d] px-3 py-1 text-xs text-vsc-text/90"
                       >
                         {badge}
                       </span>

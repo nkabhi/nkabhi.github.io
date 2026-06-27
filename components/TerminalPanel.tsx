@@ -18,14 +18,14 @@ const tabs = ['PROBLEMS', 'OUTPUT', 'DEBUG CONSOLE', 'TERMINAL', 'PORTS']
 export default function TerminalPanel() {
   return (
     <section className="flex h-56 min-h-[14rem] flex-col border-t border-white/10 bg-[#1a1a1a]">
-      <div className="flex items-center gap-2 border-b border-white/10 bg-vsc-background/90 px-4 py-2 text-xs text-vsc-text/70">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-[#252526] px-4 py-2 text-xs text-vsc-text/70">
         {tabs.map((tab) => (
           <button
             key={tab}
             className={`rounded-t-md px-3 py-1.5 ${
               tab === 'TERMINAL'
                 ? 'bg-[#1e1e1e] text-vsc-text'
-                : 'text-vsc-text/50 hover:text-vsc-text'
+                : 'text-vsc-text/60 hover:text-vsc-text'
             }`}
           >
             {tab}
