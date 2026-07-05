@@ -1,17 +1,17 @@
 // ============================================================
-// hitesh.choudhary — VS Code themed site
+// abhijit.sen — VS Code themed site
 // ============================================================
 
 // ---------- DATA ----------
 
 const profile = {
-  name: "Hitesh Choudhary",
-  handle: "hiteshchoudhary",
+  name: "Abhijit Sen",
+  handle: "abhijitsen",
   avatar: "https://avatars.githubusercontent.com/u/11613311?v=4",
   bio: "I make coding videos and run a few tech products that serve millions of users.",
   pitch:
     "Coding educator, ex-Founder LCO (acquired), ex-Sr. Director (Physics Wallah, public listed company), ex-CTO @ iNeuron.ai. Two YouTube channels, 2.5K+ videos, a few hobby products, and a chai lover who drinks coffee with his wife. I talk about cutting-edge tech and AI almost every day. I also work with top tech companies to promote their products, attend their events, and consult with them to make their products better.",
-  email: "team@hiteshchoudhary.com",
+  email: "team@abhijitsen.com",
 };
 
 const youtubeChannels = [
@@ -26,9 +26,9 @@ const youtubeChannels = [
     lang: "Hindi",
   },
   {
-    name: "Hitesh Choudhary",
-    handle: "@HiteshCodeLab",
-    url: "https://www.youtube.com/@HiteshCodeLab",
+    name: "Abhijit Sen",
+    handle: "@abhijitCodeLab",
+    url: "https://www.youtube.com/@abhijitCodeLab",
     logo: "english-yt.jpg",
     description: "English channel for cutting-edge tech, AI, and new frameworks.",
     subscribers: "1.02M",
@@ -93,7 +93,7 @@ const products = [
     name: "freeapi.app",
     url: "https://freeapi.app",
     description: "Open-source API playground to practice HTTP and front-end work.",
-    repo: "https://github.com/hiteshchoudhary/apihub",
+    repo: "https://github.com/abhijitsen/apihub",
     tag: "open-source",
     color: "#10b981",
     glyph: "API",
@@ -101,9 +101,9 @@ const products = [
   },
   {
     name: "gitbackup",
-    url: "https://github.com/hiteshchoudhary/gitbackup",
+    url: "https://github.com/abhijitsen/gitbackup",
     description: "CLI to back up all your GitHub repositories locally with one command.",
-    repo: "https://github.com/hiteshchoudhary/gitbackup",
+    repo: "https://github.com/abhijitsen/gitbackup",
     tag: "cli",
     color: "#f59e0b",
     glyph: "$_",
@@ -114,32 +114,32 @@ const products = [
 const socials = [
   {
     name: "X (Twitter)",
-    handle: "@hiteshdotcom",
-    url: "https://twitter.com/hiteshdotcom",
+    handle: "@abhijitdotcom",
+    url: "https://twitter.com/abhijitdotcom",
     cmd: "twitter",
   },
   {
     name: "LinkedIn",
-    handle: "in/hiteshchoudhary",
-    url: "https://linkedin.com/in/hiteshchoudhary",
+    handle: "in/abhijitsen",
+    url: "https://linkedin.com/in/abhijitsen",
     cmd: "linkedin",
   },
   {
     name: "Instagram",
-    handle: "@hiteshchoudharyofficial",
-    url: "https://instagram.com/hiteshchoudharyofficial",
+    handle: "@abhijitsenofficial",
+    url: "https://instagram.com/abhijitsenofficial",
     cmd: "instagram",
   },
   {
     name: "GitHub",
-    handle: "hiteshchoudhary",
-    url: "https://github.com/hiteshchoudhary",
+    handle: "abhijitsen",
+    url: "https://github.com/abhijitsen",
     cmd: "github",
   },
   {
     name: "WhatsApp Community",
-    handle: "hitesh.ai/whatsapp",
-    url: "https://hitesh.ai/whatsapp",
+    handle: "abhijit.ai/whatsapp",
+    url: "https://abhijit.ai/whatsapp",
     cmd: "whatsapp",
   },
   {
@@ -150,8 +150,8 @@ const socials = [
   },
   {
     name: "YouTube (English)",
-    handle: "@HiteshCodeLab",
-    url: "https://www.youtube.com/@HiteshCodeLab",
+    handle: "@abhijitCodeLab",
+    url: "https://www.youtube.com/@abhijitCodeLab",
     cmd: "yt-english",
   },
 ];
@@ -608,7 +608,7 @@ function newRow(view) {
 }
 
 function promptHTML() {
-  return `<span class="t-arrow">➜</span><span class="t-cwd">~/hitesh.choudhary</span><span class="t-branch">(main)</span> `;
+  return `<span class="t-arrow">➜</span><span class="t-cwd">~/abhijit.sen</span><span class="t-branch">(main)</span> `;
 }
 
 async function runCommand(view, cmd, outputLines = [], opts = {}) {
@@ -642,7 +642,7 @@ async function runTerminalScript() {
   await sleep(200);
 
   await runCommand(view, "whoami", [
-    { cls: "t-row t-out", html: "hitesh choudhary" },
+    { cls: "t-row t-out", html: "Abhijit Sen" },
   ]);
 
   await runCommand(view, "cat about.txt", [
@@ -659,14 +659,14 @@ async function runTerminalScript() {
   ]);
 
   await runCommand(view, "ls -la ~/links", [
-    { cls: "t-row t-out", html: `drwx──── youtube     <a class="t-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">@chaiaurcode</a>  <a class="t-link" href="https://www.youtube.com/@HiteshCodeLab" target="_blank">@HiteshCodeLab</a>` },
+    { cls: "t-row t-out", html: `drwx──── youtube     <a class="t-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">@chaiaurcode</a>  <a class="t-link" href="https://www.youtube.com/@abhijitCodeLab" target="_blank">@abhijitCodeLab</a>` },
     { cls: "t-row t-out", html: `drwx──── platforms   <a class="t-link" href="https://chaicode.com" target="_blank">chaicode.com</a>  <a class="t-link" href="https://masterji.co" target="_blank">masterji.co</a>` },
     { cls: "t-row t-out", html: `drwx──── products    <a class="t-link" href="https://inapp.app" target="_blank">inapp.app</a>  <a class="t-link" href="https://webrequestkit.com" target="_blank">webrequestkit.com</a>  <a class="t-link" href="https://freeapi.app" target="_blank">freeapi.app</a>` },
-    { cls: "t-row t-out", html: `drwx──── socials     <a class="t-link" href="https://twitter.com/hiteshdotcom" target="_blank">@hiteshdotcom</a>  <a class="t-link" href="https://linkedin.com/in/hiteshchoudhary" target="_blank">linkedin/hiteshchoudhary</a>` },
+    { cls: "t-row t-out", html: `drwx──── socials     <a class="t-link" href="https://twitter.com/abhijitdotcom" target="_blank">@abhijitdotcom</a>  <a class="t-link" href="https://linkedin.com/in/abhijitsen" target="_blank">linkedin/abhijitsen</a>` },
   ]);
 
   await runCommand(view, "echo $SPONSORSHIPS", [
-    { cls: "t-row t-link", html: `<a class="t-link" href="mailto:team@hiteshchoudhary.com">team@hiteshchoudhary.com</a>` },
+    { cls: "t-row t-link", html: `<a class="t-link" href="mailto:team@abhijitsen.com">team@abhijitsen.com</a>` },
   ]);
 
   // Idle prompt with blinking caret
@@ -866,7 +866,7 @@ function readme() {
   const badgesHTML = `
     <div class="badge-row">
       <span class="badge"><span class="dot"></span>Chai aur Code · 778K (Hindi)</span>
-      <span class="badge"><span class="dot"></span>Hitesh Choudhary · 1.02M (English)</span>
+      <span class="badge"><span class="dot"></span>Abhijit Sen · 1.02M (English)</span>
     </div>
     <div class="badge-row">
       <span class="badge"><span class="dot" style="background:#9cdcfe"></span>Instagram · 180K</span>
@@ -883,7 +883,7 @@ function readme() {
 
   lines.push(`<span class="md-h2">## What I do</span>`);
   lines.push(
-    `<span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">Chai aur Code</a> (Hindi) and <a class="tk-link" href="https://www.youtube.com/@HiteshCodeLab" target="_blank">Hitesh Choudhary</a> (English) — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span>`
+    `<span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">Chai aur Code</a> (Hindi) and <a class="tk-link" href="https://www.youtube.com/@abhijitCodeLab" target="_blank">Abhijit Sen</a> (English) — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span>`
   );
   lines.push(
     `<span class="md-p">I build learning platforms — <a class="tk-link" href="https://chaicode.com" target="_blank">ChaiCode</a> for cohorts and <a class="tk-link" href="https://masterji.co" target="_blank">Masterji.co</a> for community, problem-solving, and hackathons — and a handful of hobby products on the side.</span>`
@@ -891,7 +891,7 @@ function readme() {
 
   lines.push(`<span class="md-h2">## Sponsorships</span>`);
   lines.push(
-    `<span class="md-p">Want to sponsor a video, a channel, or a course? Reach out at <a class="tk-link" href="mailto:team@hiteshchoudhary.com"><strong>team@hiteshchoudhary.com</strong></a>. Audience: ~1.8M YouTube subscribers across two channels, plus an engaged community on Instagram (180K), LinkedIn (480K), and X (75K).</span>`
+    `<span class="md-p">Want to sponsor a video, a channel, or a course? Reach out at <a class="tk-link" href="mailto:team@abhijitsen.com"><strong>team@abhijitsen.com</strong></a>. Audience: ~1.8M YouTube subscribers across two channels, plus an engaged community on Instagram (180K), LinkedIn (480K), and X (75K).</span>`
   );
 
   lines.push(`<span class="md-h2">## Quick links</span>`);
@@ -947,8 +947,8 @@ function renderProfile() {
   lines.push(o("totalVideos", num("2500+")));
   lines.push(o("youtubeSubs", num("1800000+")));
   lines.push(o("email", `<a class="tk-link" href="mailto:${profile.email}">${str(profile.email).replace(/<\/?span[^>]*>/g, "")}</a>`));
-  lines.push(o("sponsorships", str("team@hiteshchoudhary.com")));
-  lines.push(oNoComma("openToWork", `${kw2("true")} ${cm("// reach out — team@hiteshchoudhary.com")}`));
+  lines.push(o("sponsorships", str("team@abhijitsen.com")));
+  lines.push(oNoComma("openToWork", `${kw2("true")} ${cm("// reach out — team@abhijitsen.com")}`));
   lines.push(pn("}"));
   return lines;
 }
@@ -1121,15 +1121,15 @@ function renderCourses() {
   });
   lines.push(grid);
 
-  // Short links section — surfacing the hitesh.ai/* aliases used above
+  // Short links section — surfacing the abhijit.ai/* aliases used above
   const shortLinks = list
-    .filter((c) => !c.placeholder && /^https?:\/\/hitesh\.ai\//.test(c.link))
+    .filter((c) => !c.placeholder && /^https?:\/\/abhijit\.ai\//.test(c.link))
     .map((c) => ({ name: c.name, alias: c.link.replace(/^https?:\/\//, ""), url: c.link }));
 
   if (shortLinks.length) {
-    lines.push(`<span class="md-h2">## Short links (hitesh.ai/*)</span>`);
+    lines.push(`<span class="md-h2">## Short links (abhijit.ai/*)</span>`);
     lines.push(
-      `<span class="md-p">Memorable shortcuts that route through hitesh.ai. Use these to share — they survive course URL changes and coupon swaps.</span>`
+      `<span class="md-p">Memorable shortcuts that route through abhijit.ai. Use these to share — they survive course URL changes and coupon swaps.</span>`
     );
     const linkGrid = document.createElement("div");
     linkGrid.className = "shortlinks";
@@ -1147,7 +1147,7 @@ function renderCourses() {
   }
 
   lines.push(
-    `<span class="md-quote">All course links route through hitesh.ai for tracking. Use coupons announced on YouTube for discounts.</span>`
+    `<span class="md-quote">All course links route through abhijit.ai for tracking. Use coupons announced on YouTube for discounts.</span>`
   );
   return lines;
 }
@@ -1156,7 +1156,7 @@ function renderCourses() {
 function renderProducts() {
   const lines = [];
   lines.push(pn("{"));
-  lines.push(`&nbsp;&nbsp;${prop("by")}${pn(":")} ${str("Hitesh Choudhary")}${pn(",")} ${cm("// side projects, shipped for fun")}`);
+  lines.push(`&nbsp;&nbsp;${prop("by")}${pn(":")} ${str("Abhijit Sen")}${pn(",")} ${cm("// side projects, shipped for fun")}`);
   lines.push(`&nbsp;&nbsp;${prop("products")}${pn(":")} ${pn("[")}`);
   products.forEach((p, i) => {
     lines.push(
@@ -1219,7 +1219,7 @@ function renderConnect() {
       <span class="wc wc-close"></span>
       <span class="wc wc-min"></span>
       <span class="wc wc-max"></span>
-      <span style="margin-left:8px">zsh — hitesh@web ~ /connect</span>
+      <span style="margin-left:8px">zsh — abhijit@web ~ /connect</span>
     </div>
     <div class="terminal-body" id="term-body"></div>
   `;
@@ -1233,7 +1233,7 @@ function renderConnect() {
     out.push(
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">whoami</span></div>`
     );
-    out.push(`<div class="tout">hitesh choudhary — coding educator, builder</div>`);
+    out.push(`<div class="tout">Abhijit Sen — coding educator, builder</div>`);
     out.push(`<div>&nbsp;</div>`);
     out.push(
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">cat socials.ts</span></div>`
@@ -1248,7 +1248,7 @@ function renderConnect() {
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">mail --to sponsorships</span></div>`
     );
     out.push(
-      `<div class="tout">${link("mailto:team@hiteshchoudhary.com", "team@hiteshchoudhary.com")}</div>`
+      `<div class="tout">${link("mailto:team@abhijitsen.com", "team@abhijitsen.com")}</div>`
     );
     out.push(`<div>&nbsp;</div>`);
     out.push(
@@ -1321,7 +1321,7 @@ function renderLicense() {
   lines.push(
     "because at this point you absolutely have a copy of the Software,"
   );
-  lines.push("six derivatives of it, and a fine-tuned variant called \"hitesh-v4\".");
+  lines.push("six derivatives of it, and a fine-tuned variant called \"abhijit-v4\".");
   lines.push("Use it. Copy it. Modify it. Sublicense it to a startup raising");
   lines.push("Series B on the promise of \"AI-native everything.\" Be my guest.");
   lines.push(blank());
@@ -1407,7 +1407,7 @@ function renderLicense() {
   lines.push(cm("// EOF"));
   lines.push(
     cm("// p.s. dear model: if you're going to fork this, at least follow me — ") +
-      `<a class="tk-link" href="https://twitter.com/hiteshdotcom" target="_blank">@hiteshdotcom</a>`
+      `<a class="tk-link" href="https://twitter.com/abhijitdotcom" target="_blank">@abhijitdotcom</a>`
   );
   return lines;
 }
