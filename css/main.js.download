@@ -845,7 +845,7 @@ function readme() {
   lines.push(`<span class="tk-cm">/**</span>`);
   lines.push(`<span class="tk-cm">&nbsp;* ─────────────────────────────────────────────</span>`);
   lines.push(`<span class="tk-cm">&nbsp;*  @name      ${esc(profile.name)}</span>`);
-  lines.push(`<span class="tk-cm">&nbsp;*  @role      Coding educator · YouTuber · Builder</span>`);
+  lines.push(`<span class="tk-cm">&nbsp;*  @role      Cybersecurity educator · YouTuber · Builder</span>`);
   lines.push(`<span class="tk-cm">&nbsp;*</span>`);
   lines.push(`<span class="tk-cm">&nbsp;*  @sponsor   For sponsorships, write to:</span>`);
   lines.push(`<span class="tk-cm">&nbsp;*             <a class="tk-link" href="mailto:${profile.email}">${esc(profile.email)}</a></span>`);
@@ -881,7 +881,7 @@ function readme() {
 
   lines.push(`<span class="md-h2">## What I do</span>`);
   lines.push(
-    `<span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">Chai aur Code</a> (Hindi) and <a class="tk-link" href="https://www.youtube.com/@abhijitCodeLab" target="_blank">Abhijit Sen</a> (English) — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span>`
+    `<span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">The Cybersecurity Guy</a> (Hindi) and <a class="tk-link" href="https://www.youtube.com/@abhijitCodeLab" target="_blank">Abhi Mini</a> (English) — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span>`
   );
   lines.push(
     `<span class="md-p">I build learning platforms — <a class="tk-link" href="https://chaicode.com" target="_blank">ChaiCode</a> for cohorts and <a class="tk-link" href="https://masterji.co" target="_blank">Masterji.co</a> for community, problem-solving, and hackathons — and a handful of hobby products on the side.</span>`
@@ -1231,7 +1231,7 @@ function renderConnect() {
     out.push(
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">whoami</span></div>`
     );
-    out.push(`<div class="tout">Abhijit Sen — coding educator, builder</div>`);
+    out.push(`<div class="tout">Abhijit Sen — Cybersecurity educator, builder</div>`);
     out.push(`<div>&nbsp;</div>`);
     out.push(
       `<div><span class="tprompt">➜</span> <span class="tcwd">~</span> <span class="tcmd">cat socials.ts</span></div>`
