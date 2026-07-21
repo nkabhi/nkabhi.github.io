@@ -8,9 +8,9 @@ const profile = {
   name: "Abhijit Sen",
   handle: "abhijitsen",
   avatar: "https://avatars.githubusercontent.com/u/11613311?v=4",
-  bio: "I make coding videos and run a few tech products that serve millions of users.",
+  bio: "I work in core cybersecurity and create content around hacking, network security, cloud security, and cutting-edge technology.",
   pitch:
-    "Coding educator, ex-Founder LCO (acquired), ex-Sr. Director (Physics Wallah, public listed company), ex-CTO @ iNeuron.ai. Two YouTube channels, 2.5K+ videos, a few hobby products, and a chai lover who drinks coffee with his wife. I talk about cutting-edge tech and AI almost every day. I also work with top tech companies to promote their products, attend their events, and consult with them to make their products better.",
+    "I run a YouTube channel where I share cybersecurity knowledge, technical deep dives, practical labs, career guidance, and my journey through the ever-evolving world of technology. I talk about cybersecurity, ethical hacking, AI, cloud, networking, automation, and the technologies shaping the future almost every day",
   email: "team@abhijitsen.com",
 };
 
@@ -865,19 +865,17 @@ function readme() {
   // Badge row
   const badgesHTML = `
     <div class="badge-row">
-      <span class="badge"><span class="dot"></span>Chai aur Code · 778K (Hindi)</span>
-      <span class="badge"><span class="dot"></span>Abhijit Sen · 1.02M (English)</span>
+      <span class="badge"><span class="dot"></span>Microsoft Cybersecurity Architect</span>
+      <span class="badge"><span class="dot"></span>PCNSE.JNCIA.ZTCA.CCNP</span>
     </div>
     <div class="badge-row">
-      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>Instagram · 180K</span>
-      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>X (Twitter) · 75K</span>
-      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>LinkedIn · 480K</span>
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>Youtube · 1K</span>
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>X (Twitter) · 1K</span>
+      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>LinkedIn · 3K</span>
     </div>
     <div class="badge-row">
-      <span class="badge"><span class="dot" style="background:#dcdcaa"></span>2.5K+ videos</span>
+      <span class="badge"><span class="dot" style="background:#dcdcaa"></span>1K+ videos</span>
       <span class="badge"><span class="dot" style="background:#ce9178"></span>7 Udemy courses</span>
-      <span class="badge"><span class="dot" style="background:#c586c0"></span>2 platforms</span>
-      <span class="badge"><span class="dot" style="background:#9cdcfe"></span>4 hobby products</span>
     </div>`;
   lines.push(badgesHTML);
 
