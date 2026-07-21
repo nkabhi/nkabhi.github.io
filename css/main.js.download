@@ -837,7 +837,7 @@ const renderers = {
   gitignore: renderGitignore,
 };
 
-// ---- README.md ----
+// ---- README.md ---- 
 function readme() {
   const lines = [];
 
