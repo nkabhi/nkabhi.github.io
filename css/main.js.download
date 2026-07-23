@@ -2,7 +2,7 @@
 // abhijit.sen — VS Code themed site
 // ============================================================
 
-// ---------- DATA ----------
+// ---------- DATA ---------- 
 
 const profile = {
   name: "Abhijit Sen",
