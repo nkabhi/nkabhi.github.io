@@ -16,47 +16,47 @@ const profile = {
 
 const youtubeChannels = [
   {
-    name: "Chai aur Code",
-    handle: "@chaiaurcode",
-    url: "https://www.youtube.com/@chaiaurcode",
-    logo: "https://avatars.githubusercontent.com/u/11613311?v=4",
-    description: "Hindi tutorials on full-stack, system design, devops, and AI.",
-    subscribers: "778K",
-    videos: "645+",
-    lang: "Hindi",
+    name: "The Cybersecurity Guy",
+    handle: "@Cyber-Security-Guy",
+    url: "https://www.youtube.com/@Cyber-Security-Guy",
+    logo: "https://avatars.githubusercontent.com/u/41926454?v=4",
+    description: "Cybersecurity knowledge, technical deep dives, practical labs, career guidance",
+    subscribers: "1K",
+    videos: "10+",
+    lang: "English",
   },
   {
-    name: "Abhijit Sen",
-    handle: "@abhijitCodeLab",
-    url: "https://www.youtube.com/@abhijitCodeLab",
-    logo: "english-yt.jpg",
-    description: "English channel for cutting-edge tech, AI, and new frameworks.",
-    subscribers: "1.02M",
-    videos: "1.7K+",
+    name: "Mini AI",
+    handle: "@miniai",
+    url: "https://www.youtube.com/@miniai",
+    logo: "https://avatars.githubusercontent.com/u/306247087?v=4",
+    description: "Cutting-edge tech, AI, and new frameworks.",
+    subscribers: "1K",
+    videos: "10+",
     lang: "English",
   },
 ];
 
 const platforms = [
   {
-    name: "ChaiCode",
-    url: "https://chaicode.com",
+    name: "PRISM",
+    url: "https://PRISM.github.io",
     logo: "cup-logo.png",
     description: "Live cohorts, project-based learning, and structured tracks.",
-    iosUrl: "https://apps.apple.com/by/app/chaicode/id6504993143",
+    iosUrl: "....",
     androidUrl:
-      "https://play.google.com/store/apps/details?id=com.chaicode.courses&hl=en_IN",
+      "....",
     badges: ["cohorts", "ios", "android"],
   },
   {
-    name: "Masterji.co",
-    url: "https://masterji.co",
-    logo: "https://www.masterji.co/masterji-mascot-white.svg",
+    name: "CyberDEFCON",
+    url: "https://CyberDEFCON.github.io",
+    logo: "...",
     description:
       "Community, our own LeetCode, hackathons, and learning playground.",
-    iosUrl: "https://apps.apple.com/by/app/masterji-learn-code/id6753772146",
+    iosUrl: "....",
     androidUrl:
-      "https://play.google.com/store/apps/details?id=com.chaicode.masterji&hl=en_IN",
+      "....",
     badges: ["community", "leetcode", "hackathons"],
   },
   {
@@ -875,21 +875,21 @@ function readme() {
     </div>
     <div class="badge-row">
       <span class="badge"><span class="dot" style="background:#dcdcaa"></span>1K+ videos</span>
-      <span class="badge"><span class="dot" style="background:#ce9178"></span>7 Udemy courses</span>
+      <span class="badge"><span class="dot" style="background:#ce9178"></span>2 Platform</span>
     </div>`;
   lines.push(badgesHTML);
 
   lines.push(`<span class="md-h2">## What I do</span>`);
   lines.push(
-    `<span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@chaiaurcode" target="_blank">The Cybersecurity Guy</a> (Hindi) and <a class="tk-link" href="https://www.youtube.com/@abhijitCodeLab" target="_blank">Abhi Mini</a> (English) — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span>`
+    `<span class="md-p">Two YouTube channels — <a class="tk-link" href="https://www.youtube.com/@Cyber-Security-Guy" target="_blank">The Cybersecurity Guy</a> and <a class="tk-link" href="https://www.youtube.com/@MiniAI" target="_blank"> Mini AI </a> — covering cutting-edge tech, AI, and the fundamentals. New videos almost every day.</span>`
   );
   lines.push(
-    `<span class="md-p">I build learning platforms — <a class="tk-link" href="https://chaicode.com" target="_blank">ChaiCode</a> for cohorts and <a class="tk-link" href="https://masterji.co" target="_blank">Masterji.co</a> for community, problem-solving, and hackathons — and a handful of hobby products on the side.</span>`
+    `<span class="md-p">I build learning platforms — <a class="tk-link" href="https://prism.github.io" target="_blank">PRISM</a> for Interview Preparations,problem-solving and hackathons and <a class="tk-link" href="https://Cyberdefcon.github.io" target="_blank">CyberDEFCON</a> for Cybersecurity Feeds</span>`
   );
 
   lines.push(`<span class="md-h2">## Sponsorships</span>`);
   lines.push(
-    `<span class="md-p">Want to sponsor a video, a channel, or a course? Reach out at <a class="tk-link" href="mailto:team@abhijitsen.com"><strong>team@abhijitsen.com</strong></a>. Audience: ~1.8M YouTube subscribers across two channels, plus an engaged community on Instagram (180K), LinkedIn (480K), and X (75K).</span>`
+    `<span class="md-p">Want to sponsor a video, a channel, or a course? Reach out at <a class="tk-link" href="mailto:team@thecybersecurityguy.com"><strong>team@thecybersecurityguy.com</strong></a>. Audience: YouTube subscribers across two channels, plus an engaged community on Instagram (1K), LinkedIn (3K), and X (1K).</span>`
   );
 
   lines.push(`<span class="md-h2">## Quick links</span>`);
