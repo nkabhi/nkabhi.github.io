@@ -700,21 +700,42 @@ details:not([open]) > .tree-summary .chev { transform: rotate(-90deg); }
 }
 .btn-primary:hover { background: #006bb3; color: #ffffff; }
 
-/* Course thumbnails */
-.course-thumb {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 4px;
-  background: var(--bg-deep);
-  overflow: hidden;
+/* Certificate gallery */
+.certificate-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
 }
-.course-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.course-thumb-empty {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
+.certificate-card {
+  padding: 10px;
+  gap: 10px;
+}
+.certificate-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 340px;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  display: block;
+  padding: 0; /* remove inner padding so image fills area */
+}
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill the area, crops but removes zoomed-out feeling */
+  object-position: center;
+  display: block;
+  border-radius: 0; /* let image reach edges */
+}
+.certificate-image-empty {
   color: var(--muted);
   font-size: 12px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
+  text-align: center;
+  padding: 20px;
+  border-style: dashed;
+  border-color: rgba(255,255,255,0.16);
 }
 
 /* Placeholder pulsing border for unknown courses */

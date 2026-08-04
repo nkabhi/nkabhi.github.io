@@ -53,15 +53,15 @@ const platforms = [
     url: "https://CyberDEFCON.github.io",
     logo: "...",
     description:
-      "Community, our own LeetCode, hackathons, and learning playground.",
+      "Community,learning playground.",
     iosUrl: "....",
     androidUrl:
       "....",
     badges: ["community", "leetcode", "hackathons"],
   },
   {
-    name: "typer.chaicode.com",
-    url: "https://typer.chaicode.com/",
+    name: "typer.coder.com",
+    url: "https://typer.coder.com/",
     logo: "",
     description: "Practice typing with real coding-style snippets.",
     badges: ["tool", "free"],
@@ -115,13 +115,13 @@ const socials = [
   {
     name: "X (Twitter)",
     handle: "@abhijitdotcom",
-    url: "https://twitter.com/abhijitdotcom",
+    url: "https://twitter.com/nkabhi",
     cmd: "twitter",
   },
   {
     name: "LinkedIn",
     handle: "in/abhijitsen",
-    url: "https://linkedin.com/in/abhijitsen",
+    url: "https://linkedin.com/in/nkabhi",
     cmd: "linkedin",
   },
   {
@@ -133,7 +133,7 @@ const socials = [
   {
     name: "GitHub",
     handle: "abhijitsen",
-    url: "https://github.com/abhijitsen",
+    url: "https://github.com/nkabhi",
     cmd: "github",
   },
   {
@@ -144,14 +144,14 @@ const socials = [
   },
   {
     name: "YouTube (Hindi)",
-    handle: "@chaiaurcode",
-    url: "https://www.youtube.com/@chaiaurcode",
+    handle: "@The CyberSecurity Guy",
+    url: "https://www.youtube.com/@thecybersecurityguy",
     cmd: "yt-hindi",
   },
   {
     name: "YouTube (English)",
-    handle: "@abhijitCodeLab",
-    url: "https://www.youtube.com/@abhijitCodeLab",
+    handle: "@Mini AI",
+    url: "https://www.youtube.com/@MiniAI",
     cmd: "yt-english",
   },
 ];
@@ -159,15 +159,15 @@ const socials = [
 // ---------- TABS ----------
 
 const TABS = [
-  { id: "readme",    label: "README.md",      folder: "about",     lang: "Markdown" },
-  { id: "profile",   label: "profile.json",   folder: "about",     lang: "JSON" },
-  { id: "youtube",   label: "channels.yml",   folder: "youtube",   lang: "YAML" },
-  { id: "platforms", label: "platforms.tsx", folder: "platforms", lang: "TypeScript JSX" },
-  { id: "courses",   label: "courses.md",     folder: "udemy",     lang: "Markdown" },
-  { id: "products",  label: "products.json",  folder: "products",  lang: "JSON" },
-  { id: "connect",   label: "socials.ts",     folder: "connect",   lang: "TypeScript" },
-  { id: "license",   label: "LICENSE.txt",    folder: ".",         lang: "Plaintext" },
-  { id: "gitignore", label: ".gitignore",     folder: ".",         lang: "Ignore" },
+  { id: "readme",    label: "README.md",      folder: "about",       lang: "Markdown" },
+  { id: "profile",   label: "profile.json",   folder: "about",       lang: "JSON" },
+  { id: "youtube",   label: "channels.yml",   folder: "youtube",     lang: "YAML" },
+  { id: "platforms", label: "platforms.tsx", folder: "platforms",   lang: "TypeScript JSX" },
+  { id: "courses",   label: "certificates.md", folder: "certificates", lang: "Markdown" },
+  { id: "products",  label: "products.json",  folder: "products",    lang: "JSON" },
+  { id: "connect",   label: "socials.ts",     folder: "connect",     lang: "TypeScript" },
+  { id: "license",   label: "LICENSE.txt",    folder: ".",           lang: "Plaintext" },
+  { id: "gitignore", label: ".gitignore",     folder: ".",           lang: "Ignore" },
 ];
 
 let activeTabId = "readme";
@@ -1048,104 +1048,41 @@ function renderPlatforms() {
   return lines;
 }
 
-// ---- courses.md ----
+// ---- certificates.md ----
 function renderCourses() {
-  const list = (typeof udemyCourses !== "undefined" && udemyCourses) || [];
+  const list = (typeof certificates !== "undefined" && certificates) || [];
   const lines = [];
 
-  // Live cohort section
-  lines.push(`<span class="md-h1"># Live classes (cohort)</span>`);
+  lines.push(`<span class="md-h1"># Certificates</span>`);
   lines.push(
-    `<span class="md-p">Live cohorts on <strong>Web Development</strong>, <strong>GenAI</strong>, <strong>Mobile Development</strong>, and more — taught in real time with peers, mentors, and projects. All cohorts run on <a class="tk-link" href="https://chaicode.com" target="_blank" rel="noopener">chaicode.com</a>.</span>`
-  );
-
-  const cohortCard = nodeFromHTML(`
-    <div class="card-grid" style="grid-template-columns:1fr">
-      <a class="card product-card card-link" href="https://chaicode.com" target="_blank" rel="noopener" style="--accent:#d97706">
-        <div class="product-accent"></div>
-        <span class="product-tag" style="--accent:#d97706;color:#f59e0b;border-color:rgba(217,119,6,0.5)">live cohorts</span>
-        <div class="product-head">
-          <div class="product-logo product-logo-img" style="background:linear-gradient(135deg,#d97706,#b86b2a)"><img src="cup-logo.png" alt="ChaiCode" loading="lazy"></div>
-          <div class="product-title">ChaiCode — Live Cohorts</div>
-          <div class="product-host">chaicode.com</div>
-        </div>
-        <div class="card-desc">Project-based cohorts on full-stack web dev, generative &amp; agentic AI, mobile development, and other tracks. Live sessions, peer community, mentor support, and structured timelines.</div>
-        <div class="card-foot">
-          <span class="chip success">web dev</span>
-          <span class="chip success">genai</span>
-          <span class="chip success">mobile dev</span>
-          <span class="chip">+ more</span>
-        </div>
-        <div class="card-cta-row">
-          <span class="btn-small btn-primary">Browse cohorts ↗</span>
-        </div>
-      </a>
-    </div>
-  `);
-  lines.push(cohortCard);
-
-  // Udemy section
-  lines.push(`<span class="md-h2">## Udemy library (self-paced)</span>`);
-  lines.push(
-    `<span class="md-p">Self-paced courses across full-stack, devops, Python, Node.js, and AI. ${list.length} courses in total.</span>`
+    `<span class="md-p">A polished gallery for your professional certifications. Add any high-resolution PNG or image URL and it will fit neatly into the card layout.</span>`
   );
 
   const grid = document.createElement("div");
-  grid.className = "card-grid";
+  grid.className = "card-grid certificate-grid";
   list.forEach((c) => {
-    const isPlaceholder = !!c.placeholder;
-    const thumb = c.imagUrl
-      ? `<div class="course-thumb"><img src="${c.imagUrl}" alt="${esc(c.name)}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;course-thumb-empty&quot;>thumbnail missing</div>'"></div>`
-      : `<div class="course-thumb"><div class="course-thumb-empty">thumbnail pending</div></div>`;
-    const chip = isPlaceholder
-      ? `<span class="chip warn">pending details</span>`
-      : `<span class="chip success">${esc(c.tag || "course")}</span>`;
+    const hasImage = !!c.imageUrl;
+    const imageMarkup = hasImage
+      ? `<div class="certificate-image"><img src="${c.imageUrl}" alt="${esc(c.name)}" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=&quot;certificate-empty&quot;>Image unavailable</div>'"></div>`
+      : `<div class="certificate-image certificate-image-empty"><span>Upload certificate image</span></div>`;
 
-    const shortAlias = c.link ? c.link.replace(/^https?:\/\//, "") : "";
+    const subtitle = [c.issuer, c.issued].filter(Boolean).join(" • ");
     const card = nodeFromHTML(`
-      <a class="card card-link ${isPlaceholder ? "placeholder" : ""}" href="${c.link}" target="_blank" rel="noopener">
-        ${thumb}
-        <div class="card-title" style="margin-top:6px">${esc(c.name)}</div>
-        <div class="card-sub" style="margin-top:2px">
-          <code class="shortlink-alias">${esc(shortAlias)}</code>
-        </div>
+      <div class="card certificate-card">
+        ${imageMarkup}
+        <div class="card-title">${esc(c.name)}</div>
+        ${subtitle ? `<div class="card-sub">${esc(subtitle)}</div>` : ""}
         <div class="card-foot">
-          ${chip}
-          <span class="chip muted">${esc(c.duration || "")}</span>
+          <span class="chip success">${esc(c.tag || "certificate")}</span>
         </div>
-      </a>
+      </div>
     `);
     grid.appendChild(card);
   });
+
   lines.push(grid);
-
-  // Short links section — surfacing the abhijit.ai/* aliases used above
-  const shortLinks = list
-    .filter((c) => !c.placeholder && /^https?:\/\/abhijit\.ai\//.test(c.link))
-    .map((c) => ({ name: c.name, alias: c.link.replace(/^https?:\/\//, ""), url: c.link }));
-
-  if (shortLinks.length) {
-    lines.push(`<span class="md-h2">## Short links (abhijit.ai/*)</span>`);
-    lines.push(
-      `<span class="md-p">Memorable shortcuts that route through abhijit.ai. Use these to share — they survive course URL changes and coupon swaps.</span>`
-    );
-    const linkGrid = document.createElement("div");
-    linkGrid.className = "shortlinks";
-    shortLinks.forEach((s) => {
-      const row = nodeFromHTML(`
-        <a class="shortlink" href="${s.url}" target="_blank" rel="noopener">
-          <code class="shortlink-alias">${esc(s.alias)}</code>
-          <span class="shortlink-arrow">→</span>
-          <span class="shortlink-name">${esc(s.name)}</span>
-        </a>
-      `);
-      linkGrid.appendChild(row);
-    });
-    lines.push(linkGrid);
-  }
-
   lines.push(
-    `<span class="md-quote">All course links route through abhijit.ai for tracking. Use coupons announced on YouTube for discounts.</span>`
+    `<span class="md-quote">The gallery is responsive and will adapt to any certificate photo you upload later.</span>`
   );
   return lines;
 }
