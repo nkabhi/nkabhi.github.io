@@ -901,9 +901,9 @@ function readme() {
   const grid = document.createElement("div");
   grid.className = "card-grid";
   [
-    { title: "Latest from YouTube", id: "youtube", desc: "Two channels, 2.5K+ videos.", chip: "yt" },
-    { title: "Cohorts at ChaiCode", id: "platforms", desc: "Live programs and structured tracks.", chip: "cohorts" },
-    { title: "Udemy library", id: "courses", desc: "7 self-paced courses.", chip: "udemy" },
+    { title: "Latest from YouTube", id: "youtube", desc: "Two channels, 10+ videos.", chip: "yt" },
+    { title: "PRISM", id: "platforms", desc: "Cybersecurity Tools and structured Quiz App.", chip: "Live" },
+    { title: "Certifications", id: "courses", desc: "Six Certifications.", chip: "crt" },
     { title: "Hobby products", id: "products", desc: "Tools I built for myself & open source.", chip: "products" },
   ].forEach((c) => {
     const card = nodeFromHTML(`
@@ -940,10 +940,10 @@ function renderProfile() {
   lines.push(o("location", str("India")));
   lines.push(o("focus", `${pn("[")} ${str("AI")}${pn(",")} ${str("full-stack")}${pn(",")} ${str("system design")}${pn(",")} ${str("devops")} ${pn("]")}`));
   lines.push(o("bio", str(profile.bio)));
-  lines.push(o("currentlyBuilding", `${pn("[")} ${str("masterji.co")}${pn(",")} ${str("chaicode cohorts")}${pn(",")} ${str("new udemy series")} ${pn("]")}`));
+  lines.push(o("currentlyOnline", `${pn("[")} ${str("The Cybersecurity Guy")}${pn(",")} ${str("Mini AI ")}${pn(",")} ${str("new udemy series")} ${pn("]")}`));
   lines.push(o("publishingCadence", str("almost daily on YouTube")));
-  lines.push(o("totalVideos", num("2500+")));
-  lines.push(o("youtubeSubs", num("1800000+")));
+  lines.push(o("totalVideos", num("10+")));
+  lines.push(o("youtubeSubs", num("1K+")));
   lines.push(o("email", `<a class="tk-link" href="mailto:${profile.email}">${str(profile.email).replace(/<\/?span[^>]*>/g, "")}</a>`));
   lines.push(o("sponsorships", str("team@abhijitsen.com")));
   lines.push(oNoComma("openToWork", `${kw2("true")} ${cm("// reach out — team@abhijitsen.com")}`));
