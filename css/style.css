@@ -737,6 +737,18 @@ details:not([open]) > .tree-summary .chev { transform: rotate(-90deg); }
   border-style: dashed;
   border-color: rgba(255,255,255,0.16);
 }
+.expired-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  background: rgba(248, 113, 113, 0.1);
+  color: #f87171;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: "Inter", system-ui, sans-serif;
+}
 
 /* Placeholder pulsing border for unknown courses */
 .card.placeholder {

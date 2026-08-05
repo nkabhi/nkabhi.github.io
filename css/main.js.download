@@ -1055,23 +1055,27 @@ function renderCourses() {
 
   lines.push(`<span class="md-h1"># Certificates</span>`);
   lines.push(
-    `<span class="md-p">A polished gallery for your professional certifications. Add any high-resolution PNG or image URL and it will fit neatly into the card layout.</span>`
+    `<span class="md-p">A polished gallery for professional certifications. </span>`
   );
 
   const grid = document.createElement("div");
   grid.className = "card-grid certificate-grid";
   list.forEach((c) => {
     const hasImage = !!c.imageUrl;
+    const ratio = c.aspectRatio ? ` aspect-ratio: ${c.aspectRatio};` : "";
     const imageMarkup = hasImage
-      ? `<div class="certificate-image"><img src="${c.imageUrl}" alt="${esc(c.name)}" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=&quot;certificate-empty&quot;>Image unavailable</div>'"></div>`
+      ? `<div class="certificate-image" style="${ratio}"><img src="${c.imageUrl}" alt="${esc(c.name)}" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=&quot;certificate-empty&quot;>Image unavailable</div>'"></div>`
       : `<div class="certificate-image certificate-image-empty"><span>Upload certificate image</span></div>`;
 
-    const subtitle = [c.issuer, c.issued].filter(Boolean).join(" • ");
+    const issuedText = c.issued === "Expired"
+      ? `<span class="expired-status">${esc(c.issued)}</span>`
+      : esc(c.issued);
+    const subtitle = [esc(c.issuer), issuedText].filter(Boolean).join(" • ");
     const card = nodeFromHTML(`
       <div class="card certificate-card">
         ${imageMarkup}
         <div class="card-title">${esc(c.name)}</div>
-        ${subtitle ? `<div class="card-sub">${esc(subtitle)}</div>` : ""}
+        ${subtitle ? `<div class="card-sub">${subtitle}</div>` : ""}
         <div class="card-foot">
           <span class="chip success">${esc(c.tag || "certificate")}</span>
         </div>
@@ -1082,7 +1086,7 @@ function renderCourses() {
 
   lines.push(grid);
   lines.push(
-    `<span class="md-quote">The gallery is responsive and will adapt to any certificate photo you upload later.</span>`
+    `<span class="md-quote">More certifications on the way </span>`
   );
   return lines;
 }
